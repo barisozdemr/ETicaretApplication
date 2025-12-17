@@ -1,0 +1,126 @@
+
+.gridpane{
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-background-color: #171717;
+    -fx-padding: 10 20 10 200;
+}
+
+.textField{
+    -fx-background-color: #292929;
+    -fx-prompt-text-fill: #D9D9D9;
+    -fx-text-fill: #D9D9D9;
+    -fx-border-width: 2;
+    -fx-border-color: #D9D9D9;
+}
+
+.pane{
+    -fx-background-color: #171717;
+}
+
+.scroll-pane{
+    -fx-background-color: #171717;
+    -fx-padding: 0 1 0 0;
+    -fx-border-width: 0;
+}
+
+.image-view{
+    -fx-padding: 10;
+}
+
+.vbox{
+    -fx-background-color: #292929;
+    -fx-spacing: 6;
+}
+
+.commentsVbox{
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-background-color: #171717;
+    -fx-padding: 10 200 10 200;
+}
+
+.commentsParentVbox{
+    -fx-background-color: #171717;
+}
+
+.hbox{
+    -fx-background-color: #292929;
+    -fx-spacing: 20;
+    -fx-padding: 10;
+}
+
+.menu-bar{
+    -fx-background-color: #292929;
+}
+
+.menu{
+    -fx-background-color: transparent;
+}
+
+.menu .label{
+    -fx-text-fill: #f0f0f0;
+}
+
+.menu:hover{
+    -fx-background-color: #555555;
+}
+
+.menu:showing{
+    -fx-background-color: #909090;
+}
+
+.menu-item{
+    -fx-background-color: #555555;
+}
+
+.menu-item .label{
+    -fx-text-fill: #f0f0f0;
+}
+
+.menu-item:hover{
+    -fx-background-color: #757575;
+}
+
+#paymentsAnchorPane{
+    -fx-background-color: #171717;
+}
+
+#paymentsHbox{
+    -fx-background-color: #303030;
+    -fx-spacing: 0;
+    -fx-padding: 10;
+}
+
+#paymentsVbox{
+    -fx-background-color: #303030;
+    -fx-spacing: 0;
+}
+
+#paymentsLabel{
+    -fx-padding: 5 0 0 10;
+}
+
+#paymentsRadioButton{
+    -fx-padding: 5 0 0 55;
+}
+
+#paymentsBuyButton{
+    -fx-background-color: #d65409;
+    -fx-border-width: 1;
+    -fx-border-color: #f0f0f0;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 30;
+    -fx-min-width: 150;
+    -fx-min-height: 50;
+}
+
+#paymentsBuyButton:hover{
+    -fx-background-color: #de8d5d;
+}
+
+#paymentsBuyButton:pressed{
+    -fx-background-color: #ab4509;
+}

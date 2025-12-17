@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #292929;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="1200.0" style="-fx-background-color: #292929;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="programLogo" fitHeight="53.0" fitWidth="59.0" layoutX="72.0" layoutY="12.0" onMouseClicked="#programLogoClicked" onMouseEntered="#setCursorToHand" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons-logos/programLogoClear.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="140.0" layoutY="26.0" prefHeight="30.0" prefWidth="179.0" text="Taksitle!" textFill="#f0f0f0">
+               <font>
+                  <Font name="Dosis Light" size="21.0" />
+               </font>
+            </Label>
+            <HBox layoutX="974.0" layoutY="-2.0" prefHeight="80.0" prefWidth="221.0">
+               <children>
+                  <Line endY="70.0" startY="-5.0" strokeWidth="5.0" />
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/icons-logos/user2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <MenuBar prefHeight="20" prefWidth="50" scaleShape="false">
+                     <menus>
+                        <Menu fx:id="usernameMenu" mnemonicParsing="false" text="Username">
+                           <items>
+                              <MenuItem fx:id="yourProfileItem" mnemonicParsing="false" onAction="#yourProfileItemSelected" text="Your Profile" />
+                              <MenuItem fx:id="changeUsernameItem" mnemonicParsing="false" onAction="#changeUsernameItemSelected" text="Change Username" />
+                              <MenuItem fx:id="changePasswordItem" mnemonicParsing="false" onAction="#changePasswordItemSelected" text="Change Password" />
+                              <MenuItem fx:id="logoutItem" mnemonicParsing="false" onAction="#logoutItemSelected" text="Logout" />
+                              <MenuItem fx:id="quitItem" mnemonicParsing="false" onAction="#quitItemSelected" text="Quit" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </MenuBar>
+               </children>
+            </HBox>
+            <Line endX="1060.0" endY="34.0" layoutX="135.0" layoutY="45.0" startX="-135.0" startY="34.0" strokeWidth="5.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="37.0" prefWidth="1200.0" style="-fx-background-color: #171717;">
+               <children>
+                  <AnchorPane fx:id="backButtonBackground" layoutX="-2.0" onMouseEntered="#setBackButtonBackgroundBrighter" onMouseExited="#setBackButtonBackgroundDarker" prefHeight="35.0" prefWidth="74.0" style="-fx-background-color: #353535;">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="67.0" layoutX="6.0" onMouseClicked="#backToSceneMain" onMouseEntered="#setCursorToHand" pickOnBounds="true">
+                           <image>
+                              <Image url="@../Images/icons-logos/backButton.png" />
+                           </image>
+                        </ImageView>
+                        <Line endX="2.0" endY="34.0" layoutX="2.0" startX="2.0" strokeWidth="5.0" />
+                     </children>
+                  </AnchorPane>
+                  <Line endX="70.0" layoutY="34.0" strokeWidth="5.0" />
+                  <Line endY="34.0" layoutX="72.0" layoutY="-2.0" strokeWidth="5.0" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="658.0" prefWidth="1200.0">
+               <children>
+                  <AnchorPane prefHeight="277.0" prefWidth="1200.0" style="-fx-background-color: #171717;">
+                     <children>
+                        <ImageView fx:id="productFavouriteImageView" fitHeight="40.0" fitWidth="40.0" layoutX="1132.0" layoutY="9.0" onMouseClicked="#favouriteButtonClicked" onMouseEntered="#setCursorToHand" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons-logos/emptyHeart.png" />
+                           </image></ImageView>
+                        <Label fx:id="productNameLabel" layoutX="561.0" prefHeight="58.0" prefWidth="556.0" text="Kulaklık" textFill="#e0e0e0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="productPriceLabel" layoutX="562.0" layoutY="126.0" text="1800 TL" textFill="#e0e0e0">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Line endX="1175.0" endY="-3.0" layoutX="24.0" layoutY="278.0" startX="-24.0" startY="-3.0" stroke="#505050" />
+                        <Label fx:id="productCategoryLabel" layoutX="882.0" layoutY="137.0" text="Category: Elektronik" textFill="#e0e0e0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="productDescriptionLabel" alignment="TOP_LEFT" layoutX="545.0" layoutY="182.0" prefHeight="94.0" prefWidth="520.0" text="Description: güzel" textFill="#e0e0e0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="585.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons-logos/star.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="productRatingLabel" layoutX="626.0" layoutY="55.0" text="4.0 (3)" textFill="#e0e0e0">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="productImageView" fitHeight="218.0" fitWidth="221.0" layoutX="240.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../../../../ETicaretDB_Images/1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="productStoreLabel" layoutX="567.0" layoutY="94.0" text="Store: TechStore  -  Store Email: techStore@example.com" textFill="#e0e0e0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="productCartView" fitHeight="50.0" fitWidth="50.0" layoutX="1107.0" layoutY="206.0" onMouseClicked="#cartButtonClicked" onMouseEntered="#hoverCartButtonEnter" onMouseExited="#hoverCartButtonExit" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons-logos/basket.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="paymentsScrollPane" prefHeight="386.0" prefWidth="1200.0">
+                     <content>
+                        <VBox fx:id="commentsParentVbox" minHeight="-Infinity" prefWidth="1200.0">
+                           <children>
+                              <AnchorPane fx:id="commentPane" prefHeight="114.0" prefWidth="977.0">
+                                 <children>
+                                    <TextField fx:id="commentTextField" layoutX="229.0" layoutY="47.0" prefHeight="53.0" prefWidth="693.0" promptText="comment here..." />
+                                    <Label layoutX="261.0" layoutY="21.0" text="Make a Comment:" textFill="#d9d9d9" />
+                                    <ImageView fx:id="commentButton" fitHeight="59.0" fitWidth="67.0" layoutX="955.0" layoutY="44.0" onMouseClicked="#commentButtonClicked" onMouseEntered="#hoverCommentButtonEnter" onMouseExited="#hoverCommentButtonExit" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/icons-logos/comment.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ChoiceBox fx:id="starChoiceBox" layoutX="151.0" layoutY="58.0" prefHeight="25.0" prefWidth="38.0" />
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="105.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/icons-logos/star.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <VBox fx:id="commentsVbox" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

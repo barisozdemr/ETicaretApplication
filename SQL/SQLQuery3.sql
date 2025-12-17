@@ -1,0 +1,2 @@
+ALTER TABLE UserCart
+ADD Quantity INT NOT NULL DEFAULT 1;
