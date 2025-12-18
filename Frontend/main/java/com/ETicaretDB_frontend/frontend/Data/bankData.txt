@@ -1,0 +1,6 @@
+101;Yapı Kredi:/Images/icons-logos/yapiKredi.jpg:4:6:10:15
+102;Ziraat Bankası:/Images/icons-logos/ziraatBankasi.jpg:6:8:10:13
+103;Akbank:/Images/icons-logos/akbank.jpg:3:6:12:20
+104;İş Bankası:/Images/icons-logos/isBankasi.jpg:5:5:12:18
+105;Vakıfbank:/Images/icons-logos/vakifbank.jpg:2:8:13:20
+106;Garanti Bankası:/Images/icons-logos/garantiBankasi.jpg:3:7:10:14

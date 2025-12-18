@@ -1,0 +1,13 @@
+1001;Elektrikli Bisiklet:/Images/products/bisiklet.jpg:32000
+1002;Nike Sırt Çantası:/Images/products/canta.jpg:2500
+1003;Rotring 800 Uçlu Kalem:/Images/products/kalem.jpg:1800
+1004;Adidas Sneaker Ayakkabı:/Images/products/ayakkabi.jpg:2000
+1005;Kışlık Mont:/Images/products/mont.jpg:1700
+1006;Seiko Analog Saat:/Images/products/saat.jpg:18000
+1007;İphone 16 Telefon:/Images/products/telefon.jpg:80000
+1008;Razer Kulaküstü Kulaklık:/Images/products/kulaklik.jpg:4100
+1009;Zowie Mouse:/Images/products/mouse.jpg:5300
+1010;Asus Gaming Laptop:/Images/products/laptop.jpg:52000
+1011;Bicycle Ghost Oyun Kartı:/Images/products/kart.jpg:520
+1012;HardLine Whey 3 Matrix:/Images/products/protein_tozu.jpg:2500
+1013;Samsung Televizyon 4k 60'':/Images/products/televizyon.jpg:38000

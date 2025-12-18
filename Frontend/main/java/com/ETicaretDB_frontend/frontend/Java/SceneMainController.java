@@ -82,7 +82,8 @@ public class SceneMainController {
 
         try{
             productData = getAllProductsMap(); //-------------------------------- get product data
-        }catch(Exception ex){}
+        }catch(Exception ex){
+            System.out.println("productData fail");ex.printStackTrace();}
 
         DataStore.productData = productData;
 
@@ -101,6 +102,8 @@ public class SceneMainController {
                 .newBuilder()
                 .addPathSegment(String.valueOf(DataStore.loggedUsersId))
                 .build();
+
+        System.out.println(url);
 
         Request request2 = new Request.Builder()
                 .url(url)
@@ -131,17 +134,23 @@ public class SceneMainController {
                 .get()
                 .build();
 
+        System.out.println("http://"+ip+"/api/products");
+
         try (Response response = client.newCall(request).execute()) {
 
             if (!response.isSuccessful() || response.body() == null) {
                 return null;
             }
 
+            System.out.println("A");
+
             String json = response.body().string().trim();
 
             JsonArray arr = JsonParser.parseString(json).getAsJsonArray();
 
             HashMap<String, ArrayList<String>> resultMap = new HashMap<>();
+
+            System.out.println("A");
 
             for (int i = 0; i < arr.size(); i++) {
 
@@ -159,14 +168,33 @@ public class SceneMainController {
                         .get()
                         .build();
 
+                System.out.println("B");
+
                 response2 = client2.newCall(request2).execute();
+
+                System.out.println("C");
 
                 json = new String(response2.body().bytes(), StandardCharsets.UTF_8).trim();
 
+                System.out.println("D");
+
                 JsonObject ratingObj = JsonParser.parseString(json).getAsJsonObject();
 
-                String averageRating = ratingObj.get("averageRating").getAsString();
-                String ratingCount = ratingObj.get("ratingCount").getAsString();
+                System.out.println("E");
+
+                String averageRating;
+                String ratingCount;
+
+                if(ratingObj.get("averageRating").isJsonNull()){
+                    averageRating = "0";
+                    ratingCount = "0";
+                }
+                else{
+                    averageRating = ratingObj.get("averageRating").getAsString();
+                    ratingCount = ratingObj.get("ratingCount").getAsString();
+                }
+
+                System.out.println("F");
 
                 // map içine eklenecek liste
                 ArrayList<String> list = new ArrayList<>();
@@ -246,6 +274,8 @@ public class SceneMainController {
 
     public void setCategoryHBox()
     {
+        System.out.println(categoryList);
+
         categoryHBox.getChildren().clear();
 
         categoryHBox.setSpacing(8);
@@ -353,8 +383,17 @@ public class SceneMainController {
 
                 JsonObject ratingObj = JsonParser.parseString(json).getAsJsonObject();
 
-                String averageRating = ratingObj.get("averageRating").getAsString();
-                String ratingCount = ratingObj.get("ratingCount").getAsString();
+                String averageRating;
+                String ratingCount;
+
+                if(ratingObj.get("averageRating").isJsonNull()){
+                    averageRating = "0";
+                    ratingCount = "0";
+                }
+                else{
+                    averageRating = ratingObj.get("averageRating").getAsString();
+                    ratingCount = ratingObj.get("ratingCount").getAsString();
+                }
 
                 // map içine eklenecek liste
                 ArrayList<String> list = new ArrayList<>();

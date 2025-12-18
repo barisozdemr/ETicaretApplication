@@ -104,6 +104,7 @@ public class SceneSignInController {
             stage.show(); //show scene
         } catch (IOException ex) {
             System.out.println("/com/ETicaretDB_frontend/frontend/Views/SceneMain.fxml could not be loaded");
+            ex.printStackTrace();
         }
     }
     
