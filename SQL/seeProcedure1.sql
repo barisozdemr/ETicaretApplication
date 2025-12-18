@@ -1,0 +1,1 @@
+EXEC GetUserFavourites @userId = 4;
